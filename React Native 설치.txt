@@ -1,0 +1,40 @@
+react Native 설치
+
+react native 검색
+React Native · A framework for building native apps using React 접속 (https://facebook.github.io/react-native/)
+get started 클릭
+React Native CLI Quickstart 탭의 Windows탭의 Android탭으로 이동
+설명서대로 설치 (cordova 설치과정과 거의 같다)
+
+cmd창에서 설치할 곳으로 이동해서
+C:\Users\user>d:
+D:\>cd D:\HybridApp\ReactNative       // 설치할 곳
+D:\HybridApp\ReactNative>npx react-native init RN01MyApp          // 설치
+설치가 끝나면
+D:\HybridApp\ReactNative>adb devices	// 장치가 잡히는지 확인 (장치: 가상머신 or 실디바이스)
+
+이런식으로 뜨면 성공
+List of devices attached
+emulator-5554   device
+
+만들어진 폴더로 이동
+D:\HybridApp\ReactNative>cd RN01MyApp
+
+실행해보기
+D:\HybridApp\ReactNative\RN01MyApp>npx react-native run-android	//npm이면 npx 안써도 됨
+//새로운 node창(디바이스 제어)이 뜨면 성공 (첫 실행시 시간이 좀 걸림)
+node창을 닫으면 cmd창에서 다음 명령을 쓸 수 있다. 하지만 디바이스에 연결이 끊어졌다는 경고가 뜬다. 다시 연결하려면 다시 npx 실행
+디바이스에서 연결을 완벽하게 끊으려면, 디바이스의 우하단 버튼인 디바이스의 실행중인 앱 목록에서 완전히 종료해야 한다
+
+안드로이드 스튜디오에서 프로젝트를 열려면 프로젝트 open 경로를 D:\HybridApp\ReactNative\RN01MyApp\android 로 잡아야 한다.
+
+D:\HybridApp\ReactNative\RN01MyApp 폴더내에서 중요하게 봐야 하는 파일 4개
+App.js		//메인 액테비티 역할
+app.json		//values/string.xml 역할
+index.js		//매니페스트 역할
+package.json
+
+하이브리드 문법을 알기위해 Web/Day14_ECMAscript6 예제 참고
+
+
+

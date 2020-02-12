@@ -1,0 +1,62 @@
+1. nodejs 설치 - with chocolatey.
+
+2. 명령프롬프트(cmd)를 '관리자권한으로 실행' 하여 nodejs.install python2 jdk8 설치
+  $  choco install -y nodejs.install python2 jdk8
+
+ # 확인 - cmd창에서 javac 했을때 인식하면 성공
+
+3. Android Studio 설치 및 AVD 설치 및 실행
+
+4. Android SDK  path 환경변수 설정
+  - ANDROID_HOME 이름으로 사용자변수 생성 - SDK 경로 설정
+
+5. Android SDK flatform-tools    path추가 환경변수 추가 
+
+6. 원하는 디렉토리로 이동( D:\HybridApp\ReactNative)
+
+7. 프로젝트 생성 
+ $ (npx) react-native init Hello    // 패키지명과 앱이름은 따로 수동으로 해줘야 한다
+
+8. 프로젝트 실행 [ android platform ]
+ $  cd Hello
+ $  (npx) react-native run-android
+
+
+# > adb devices : 현재실행중인 AVD장치 목록 보기
+
+
+
+
+
+#### nodeJS 버전 업 하면서 npx 등장 및 사용권장. ###################################
+
+   - npm과 다르게 일회용설치 같은 개념.  [전역으로 react-native명령어를 사용할 수 있음]   
+   - 매 명령 작업마다 그때 그때 설치하는 개념.
+   - react-native명령을 수행할 때 마다 앞에 npx 키워드를 붙여서 사용.
+
+  * 장점 *
+  - 옵션으로 버전번호를 추가하여 특정 버전으로 실행되도록 할 수 있음.
+  - 항상 자동으로 그 순간의 최신버전으로 설치되기에 버전변화에 쉽게 대응할 수 있음.
+  - npm은 한번 설치하면 다음부터는 npm키워드 없이 사용 가능하지만 설치형이므로 최신버전으로 자동 갱신되거나 하지 않음.
+
+
+  * 단점 *
+  - 그때그때 react-native를 다운로드하여 실행하므로 실행시 오래걸림.. 
+ 
+ ############################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

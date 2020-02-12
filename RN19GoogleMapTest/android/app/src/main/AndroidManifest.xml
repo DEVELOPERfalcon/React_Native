@@ -1,0 +1,63 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.rn19googlemaptest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme">
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:windowSoftInputMode="adjustResize">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
+      <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+
+      <!-- 구글지도 사용을 위한 API 키 등록 -->
+      <!-- 구글개발자콘솔에서 지도사용을 위한 지도 API에대한 key 발급받기 -->
+      <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD5uU9FT7rQQS5L487Qh7lBE-HI5knnYPU"/>
+
+      <!-- SHA1 지문 얻기 -->
+      <!-- 명령프롬프트창에서 프로젝트폴더\android폴더까지 이동 하여 아래 명령어 입력-->
+      <!-- D:\ReactNative\RN19GoogleMapTest\android> gradlew signingReport  -->
+
+      <!-- 다음의 정보들을 얻을 수 있다 [  Variant , Config , Store , Alias , MD5 , SHA1 , SHA-256 , Valid.  until  ]-->
+      
+      <!-- 단위테스트의 값들도 있으므로 Variant : release, debug 값을 확인할 것 : 배포하게 되면 당연히 release값으로 적용-->
+      
+      <!-- // gradlew signingReport 
+     
+      Variant: debug
+      Config: debug
+      Store: D:\ReactNative\RN19GoogleMapTest\android\app\debug.keystore
+      Alias: androiddebugkey
+      MD5: 20:F4:61:48:B7:2D:8E:5E:5C:A2:3D:37:A4:F4:14:90
+      SHA1: 5E:8F:16:06:2E:A3:CD:2C:4A:0D:54:78:76:BA:A6:F3:8C:AB:F6:25
+      SHA-256: FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C
+      Valid until: 2052년 5월 1일 수요일
+      
+      Variant: release
+      Config: debug
+      Store: D:\ReactNative\RN19GoogleMapTest\android\app\debug.keystore
+      Alias: androiddebugkey
+      MD5: 20:F4:61:48:B7:2D:8E:5E:5C:A2:3D:37:A4:F4:14:90
+      SHA1: 5E:8F:16:06:2E:A3:CD:2C:4A:0D:54:78:76:BA:A6:F3:8C:AB:F6:25
+      SHA-256: FA:C6:17:45:DC:09:03:78:6F:B9:ED:E6:2A:96:2B:39:9F:73:48:F0:BB:6F:89:9B:83:32:66:75:91:03:3B:9C
+      Valid until: 2052년 5월 1일 수요일
+      
+      // -->    
+
+    </application>
+
+</manifest>
